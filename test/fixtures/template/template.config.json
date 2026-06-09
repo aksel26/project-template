@@ -1,0 +1,21 @@
+{
+  "prompts": [
+    { "key": "customer", "type": "text", "message": "고객사명" },
+    { "key": "examType", "type": "select", "message": "유형",
+      "choices": [
+        { "title": "인적성", "value": "aptitude" },
+        { "title": "PT면접", "value": "pt-interview" }
+      ] },
+    { "key": "serverIp", "type": "text", "message": "서버 IP" },
+    { "key": "port", "type": "text", "message": "포트" },
+    { "key": "dbPassword", "type": "password", "message": "DB 비밀번호" },
+    { "key": "apiBaseUrl", "type": "text", "message": "API base URL" }
+  ],
+  "compose": { "base": "_base", "byType": "{examType}" },
+  "tokens": { "__CUSTOMER__": "{customer}" },
+  "env": [
+    { "target": "apps/api/.env", "from": "apps/api/.env.template" },
+    { "target": "apps/admin/.env", "from": "apps/admin/.env.template" },
+    { "target": "apps/user/.env", "from": "apps/user/.env.template" }
+  ]
+}
