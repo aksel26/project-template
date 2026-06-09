@@ -1,0 +1,28 @@
+{
+  "name": "@acg/create-exam",
+  "version": "0.1.0",
+  "description": "고객사별 시험/면접 플랫폼 모노레포 스캐폴더",
+  "type": "module",
+  "bin": { "create-exam": "./dist/index.js" },
+  "files": ["dist"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "execa": "^9.5.1",
+    "giget": "^1.2.3",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/prompts": "^2.4.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com" }
+}
