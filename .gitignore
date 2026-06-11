@@ -2,6 +2,7 @@ node_modules
 dist
 .create-exam-cache
 *.log
+.DS_Store
 
 # oh-my-claudecode 로컬 세션/상태 (커밋 금지)
 .omc/
